@@ -1,22 +1,40 @@
-#include<iostream>
+# include <iostream>
 using namespace std;
 
-int main() {
-  double num, den, result;
-  char op;
-  do {
-    cout << "\nCalcucator - Enter number: ";
-    con >> num;
-    cout << "Enter operator +,-,*,/: ";
+int main()
+{
+    char op;
+    float num1, num2;
+
+    cout << "Enter operator either + or - or * or /: ";
     cin >> op;
-    cot << enter second number: ";
-    cin >> den;
-    if (op=='+') result=num+den;
-    if (op=='-') result=num-den;
-    if (op=='*') result=num*den;
-    if (op=='/') result=num/den;
-    cout << result;
-  }
-  while (op!='e');
-  return 0;
+
+    cout << "Enter two operands: ";
+    cin >> num1 >> num2;
+
+    switch(op)
+    {
+        case '+':
+            cout << num1+num2;
+            break;
+
+        case '-':
+            cout << num1-num2;
+            break;
+
+        case '*':
+            cout << num1*num2;
+            break;
+
+        case '/':
+            cout << num1/num2;
+            break;
+
+        default:
+            // If the operator is other than +, -, * or /, error message is shown
+            cout << "Error! operator is not correct";
+            break;
+    }
+
+    return 0;
 }
